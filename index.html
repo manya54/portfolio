@@ -1,0 +1,264 @@
+<!DOCTYPE>
+<html dir = "ltr" lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "author" content = "Manya Malik">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+        <title>Manya's Portfolio</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
+        <!--css-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    </head>
+    <body>
+        <header>
+            <!--fixed nav bar-->
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href='#projects'>Work Experience & Projects</a></li>
+                    <li><a href='#contact'>Get In Touch</a></li>
+                </ul>
+            </nav>
+            <section id="home">
+            <div class="intro">
+                <img src="images/manya_m.jpg" alt="Manya Malik" class="profile-pic"> 
+                <div class="intro-text">
+                    <p class="big-hello">Hello!</p>
+                    <hr>
+                    <p>I'm Manya Malik, an electronic engineering student passionate about electronics and software.</p>
+                    <span>
+                        <a href="images/Resume.pdf" download class="download-btn">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                    </span>
+                    <div class="icon-row">
+                        <a href="https://www.linkedin.com/in/manya-malik-5368a5287/" target="_blank" rel="noopener noreferrer" class="icon linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        
+                        <a href="https://github.com/manya54" target="_blank" rel="noopener noreferrer" class="icon github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ireland</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </header>
+        <main>
+
+
+            <section id="education"><h1>Education</h1>
+                <div class="uni">
+                    <div class="mySlides">
+                    <h4>Technological University Dublin</h4>
+                        <img src="images/uni.jpg" alt="TU Dublin University" class="uniPic"/>
+                    </div>
+                    
+                    <div class="mySlides">
+                        <h4>University and school details</h4>
+                        <div class="slide-content">
+                            <div class="row">
+                                <div class="column">
+                                    <h3>University</h3>
+                                    <p class="slide-p">
+                                        <b>TU Dublin</b>
+                                        <br>
+                                         Degree:<br> Electronic Engineering BEng (Hons) 
+                                        <br>
+                                        <i>Currently: In year 3</i>
+                                        <br>
+                                        <br>
+                                        Grades:<br>
+                                        • 1st year GPA: 3.97/4.0
+                                        <br>
+                                        • 2nd year GPA: 4.0/4.0                                       
+                                        <br>
+                                        <br>
+                                        Duration:<br> 09/2023-present, expected graduation: 05/2027 <br>4 years
+                                    </p>
+                                </div>
+                                <div class="column">
+                                    <h3>Secondary school</h3>
+                                    <p class="slide-p">
+                                        <b>Loreto College</b>
+                                        <br>
+                                        Grades/Points: 577/625<br>
+                                        <br>
+                                        English: H1<br>
+                                        Maths: H2 <br>
+                                        Physics: H2 <br>
+                                        Chemistry: H2 <br>
+                                        Biology: H1 <br>
+                                        Agricultural Science: H2
+                                        <br>
+                                        <br>
+                                        Duration: <br>
+                                         (09/2021-06/2023)
+                                    </p>
+                                    <p class="LC"><b> Explanation of Leaving Certificate Grades:</b><br> H1 = 90 - 100%     H2 = 80 < 90%</p>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+
+                     <!-- Next/prev buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- Dots/bullets/indicators -->
+                    <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <button type="button" class="collapsible">Skills</button>
+                    <div class="content">
+                    <ol>
+                        <li>python: oop, pandas, matplotlib, pyQt</li>
+                            <li>java</li>
+                            <li>assembly code</li>
+                            <li>Networking</li>
+                            <li>CAD: multisim, ultiboard</li>
+                            <li>Embedded Systems </li>
+                            <li>IoT: Arduino, Internet of Things (Bluetooth, LoRa, Wi-Fi, SPI, One-Wire, I2C)</li>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>timing analysis in FPGAs</li>
+                            <li>MATLAB</li>
+                    </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h1>Work Experience & Projects</h1>
+
+                <div class="rows">
+                    <div class="col">
+                        <div class="details">
+                            <img src="images/fpga.jpg" alt="FPGA" style="width:100%">
+                            <h3>FPGA Project Collaboration</h3>
+                            <p style="font-size: 17.5px;">
+                                Working under the mentorship of an AMD engineer to enhance technical skills in FPGA development, this collaboration provides invaluable exposure
+                                to industry-standard tools and a professional work environment, with regular communication with supervisors and progress presentations.
+                                <br> Currently furthering my FPGA skills by working on a project that involves debugging over a PCIe link using segmented configuration and
+                                enhancing my Verilog skills.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="details">
+                            <img src="images/pyqt.jpg" alt="data analysis application" style="width:100%">
+                            <h3>Data Analysis Application</h3>
+                            <p style="font-size: 17.5px;">
+                                Developed a Python-based file analysis application to read in a data file and present it in a tabular format, providing options for
+                                generatng different kinds of graphs. <br>
+                                Designed with efficiency in mind, the application streamlines data analysis by creating a visual representation of extensive data. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="details">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="images/water.jpg" alt="Arduino-based water quality sensor" style="width:100%">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="images/croke.jpg" alt="croke park conference" style="width:100%">
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Arduino-based water quality sensor</h3>
+                                <p style="font-size: 17.5px;">
+                                    Worked on developing an Arduino-based water quality sensor as a part of a water sustainability project to analyse the campus lake, collaborating
+                                    with interdisciplinary teams and integrating scientific knowledge.
+                                    Achievements/Tasks<br>
+                                    <ol>
+                                        <li>Worked with a team to create an Arduino based water quality sensor.</li>
+                                        <li>Created visual data representations for presentations and meetings.</li>
+                                        <li>Presented our work at the N-TUTORR Partners in Innovation and Change National Showcase and Conference at Croke park.</li>
+                                        <li>Presented our work for the green campus evaluation of TU Dublin.</li>
+                                    </ol>
+                                </p>
+                            </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="details">
+                            <img src="images/2ndYr_project.jpg" alt="Tilt/orientation sensor system" style="width:100%">
+                            <h3>Tilt/orientation sensor system</h3>
+                            <p style="font-size: 17.5px;">
+                                Developed a 2D orientation sensing system using an ADXL335 analog sensor and an Arduino with a successive approximation ADC PCB.<br>
+                                <ol>
+                                    <li>Created a prototype on a Vero-board and tested it with an Arduino.</li>
+                                    <li>Designed the ADC on Multisim and had the PCB manufactured.</li>
+                                    <li>Acquired and processed real-time analog voltage signals from the accelerometer's X and Y axes to determine board tilt.</li>
+                                    <li>Implemented mathematical formulas using an Arduino to convert voltage outputs into angle measurements representing the vertical and
+                                    horizontal orientation of the PCB.</li>
+                                </ol>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="details">
+                            <img src="images/weather.jpg" alt="Weather station" style="width:100%">
+                            <h3>Weather station</h3>
+                            <p style="font-size: 17.5px;">
+                                Designed and implemented a smart weather monitoring system using multiple communication protocols for real-time data acquisition and
+                                transmission.<br>
+                                <ol>
+                                    <li>The BME280 and DS18B20 sensors measure temperature, pressure, and humidity with the readings displayed on an LCD via I2C.</li>
+                                    <li>SPI was used for LoRa integration which enables long-range transmission of the readings from the sensors.</li>
+                                    <li>Wi-Fi hosts a web server to display sensor data in real time.</li>
+                                    <li>Bluetooth allows readings to be accessed on a mobile device through a serial terminal app. </li>
+                                </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="contact">
+                <h1 style="text-align: center;">Get In Touch</h1>
+                <div class="contact-methods-row">
+                    <a href="mailto:manyamalik.bus@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>manyamalik.bus@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/manya-malik-5368a5287/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+                Website made by Manya Malik
+        </footer>
+
+    <script src="Js/script.js"></script>
+    </body>
+</html>

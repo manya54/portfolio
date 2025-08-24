@@ -1,0 +1,590 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  scroll-snap-align: start;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 60px; 
+  margin-top: -60px;
+  visibility: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
+  background-color: #FAF7F2;
+}
+
+h1 {
+  font-size: 25px;
+  color: #01205F;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+
+h3 {
+  text-decoration: underline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #01205F;
+}
+
+h4{
+  color: #01205F;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #01205F;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+ol{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #01205F;
+  font-size: 17.5px;
+}
+
+/************************************************HOME SECTION**************************************************/
+
+/* Navbar */
+.navbar {
+  background-color: #F5FAFF;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar li a {
+  display: block;
+  color: #01205F;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #FFFCF7;
+}
+
+.navbar li a.active {
+  background-color: #71aae7;
+  color: #FFFCF7;
+}
+
+/* Content and sections */
+.content {
+  margin-top: 60px; /* Leaves space for fixed navbar */
+  padding: 20px;
+  padding-bottom: 50px; /* space for footer */
+}
+
+
+/* Remove spacer for hero only */
+section#home::before {
+  height: 0;
+  margin-top: 0;
+}
+
+/* Hero */
+section#home {
+  padding: 65px 150px 60px; /* top padding gives breathing room */
+  display: flex;
+  align-items: flex-start; /* start at top padding */
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+}
+
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px; /*between picture and text*/
+
+  /*box*/
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 40px; /*from content to card*/
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  position: relative;
+  z-index: 1; /*determines overlap*/
+  max-width: 780px;
+  width: 100%;
+}
+
+
+.big-hello {
+  font-size: 35px;
+  color: 01205F;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  align-self: first baseline;
+}
+
+.intro-text hr {
+  width: 100%;            /* how wide you want the line */
+  border: none;          /* remove default border */
+  border-top: 2px solid black; /* add a custom line */
+  margin: 10px 0;        /* spacing above/below */
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  transform: translateY(-15%);
+}
+
+.profile-pic {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border-style: double;
+  border-width: 3px;
+  border-color: #E1EBF7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text, .profile-pic {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards ease-in-out;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #01205F;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer; 
+  transition-duration: 0.5s;
+  color: #FFFCF7;
+  display: inline-block; /* or block */
+  margin-top: 30px;      /* adjust spacing */
+}
+
+.download-btn:hover {
+  background-color: rgb(120, 160, 230);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/* Container for the icons aligned horizontally */
+.icon-row {
+  display: flex;
+  justify-content: space-between; /* space icons left, center, right */
+  max-width: 900px; /* determines the space within which the icons exist */
+  gap: 50px; /*space between icons*/
+  margin-top: 35px;  /* space from text */
+  
+}
+
+
+/* Common styles for all icons */
+.icon {
+  font-size: 27px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between marker and text */
+  color: #3273BA;
+  font-size: 20px;
+}
+
+/* Different colors for each icon */
+.linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.github {
+  color: #333;    /* GitHub dark */
+}
+
+.location .icon {
+  color: #3273BA;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/*************************************************EDUCATION SECTION*****************************************************/
+
+/* Slideshow container */
+.uni {
+  position: relative;
+  /*background: #FFFCF7;*/
+  box-shadow: 0 8px 20px  rgba(0, 0, 0, 0.15);
+  background:  #F5FAFF;
+  border-radius: 20px;
+  max-width: 70%;
+  margin: auto;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 30px;
+}
+
+.uniPic{
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Slide text content */
+.slide-content {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 92%;
+  min-height: 300px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  column-gap: 40px;
+}
+
+.slide-p{
+  font-size: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.LC{
+  background-image: linear-gradient(to left, rgba(255,0,0,0), #e9f3ff);
+  border-left: 4px solid rgb(114, 178, 255);
+  font-size: 12px;
+  padding-left: 3px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #01205F;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 10;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover */
+.prev:hover, .next:hover {
+  background-color: #91c2ff;
+  color: white;
+}
+
+
+
+.dot-container {
+  text-align: center;
+  padding: 9px;
+  width: 68.5%;
+  max-width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  margin-bottom: 80px; /*space between shlideshow and collapsible*/
+}
+
+/* The dots*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #91c2ff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot */
+.active, .dot:hover {
+  background-color: #01205F;
+}
+
+
+
+/****************education: skills**************/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #F5FAFF;
+  color: #01205F;
+  cursor: pointer;
+  padding: 18px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color:#01205F;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  max-width: 80%;
+  margin: 0 auto;
+  
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.activeC,.collapsible:hover{
+  background-color: #01205F;
+  color:#FFFCF7
+}
+
+/* Style the collapsible conten. */
+.content {
+  padding: 0 18px;
+  /*display: none;*/ /*for collapsing the content by default*/
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #01205F;
+  width: 67%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.activeC:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/********************************************************Projects************************************************************/
+
+#projects .details img {
+    width: 100%;
+    height:  350px; 
+    object-fit: cover; /* ensures the image covers the area without distortion */
+    border-radius: 8px; /* makes corners smooth */
+}
+
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;  
+  max-width: 1000px;
+}
+
+.col {
+  flex: 1 1 45%;
+  max-width: 45%;
+  display: flex;
+}
+
+.details {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height:  350px; 
+  object-fit: cover; /* ensures the image covers the area without distortion */
+  border-radius: 8px; 
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height:  350px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height:  350px; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .col {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+
+/**********************************************************CONTACT****************************************************/
+#contact {
+  min-height: 40vh; /*removing the empty space beneath*/
+  padding-bottom: 40px; 
+}
+
+.contact-methods-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between email and LinkedIn */
+  margin-top: 10px;
+}
+
+.contact-link {
+  font-size: 18px;
+  color: #01205F;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link i {
+  margin-right: 8px;
+}
+
+.contact-link:hover {
+  color: #3273BA;
+}
+
+
+/*********************************************FOOTER******************************************************************/
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #F5FAFF;
+  font-size: 14px;
+  color: 01205F;
+  z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+  }
+}
