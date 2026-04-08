@@ -397,6 +397,60 @@ section#home {
   max-width: 80%;
   margin: 0 auto;
   
+} 
+/* Skills Container */
+.skills-container {
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.skills-container h2 {
+    color: #01205F;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+}
+
+/* The Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Individual Skill "Tags" */
+.skill-item {
+    background-color: #F5FAFF; /* Light blue background */
+    border: 1px solid #01205F;
+    border-radius: 8px;
+    padding: 15px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #01205F;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px); /* Subtle lift effect */
+    background-color: #E1EBF7;
+}
+
+/* Category Titles */
+.skill-item b {
+    display: block;
+    color: #3273BA;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile responsive width */
+@media screen and (max-width: 600px) {
+    .skills-container {
+        width: 90%;
+    }
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
