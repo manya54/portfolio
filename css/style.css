@@ -141,7 +141,7 @@ section#home {
 
 .big-hello {
   font-size: 35px;
-  color: 01205F;
+  color: #01205F;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 800;
   margin-bottom: 0;
@@ -406,7 +406,7 @@ section#home {
 }
 
 /* Style the collapsible conten. */
-.content {
+.collapsible-content {
   padding: 0 18px;
   /*display: none;*/ /*for collapsing the content by default*/
   overflow: hidden;
@@ -513,7 +513,7 @@ section#home {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .col {
     width: 50%;
   }
@@ -565,26 +565,97 @@ section#home {
   padding: 10px;
   background-color: #F5FAFF;
   font-size: 14px;
-  color: 01205F;
+  color: #01205F;
   z-index: 1000;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+/* Responsive adjustments for phones */
+@media screen and (max-width: 600px) {
+  html {
+    scroll-snap-type: none; /* disable scroll snap on phones */
   }
 
-  .header-right {
-    float: none;
+  /* Navbar */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .navbar {
+    position: relative; /* navbar scrolls on phones */
+  }
+
+  
+  /* Intro (Home section) */
+  #home {
+    padding: 40px 10px 40px; /* smaller top/bottom & side padding */
+    justify-content: center;  /* center the intro box */ 
   }
 
   .intro {
+  flex-direction: column;
+  background: none;          /* remove the semi-transparent white box */
+  box-shadow: none;          /* remove the shadow */
+  border-radius: 0;          /* remove rounded corners */
+  padding: 0;                /* optional: remove extra padding */
+}
+
+  /* .intro {
     flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 95%;
     text-align: center;
+  } */
+
+  .profile-pic {
+    width: 150px;
+    height: 180px;
+  }
+
+  .big-hello {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* Education section */
+  .uni, .content {
+    max-width: 95%;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  /* Projects grid */
+  .rows {
+    gap: 15px;
+  }
+
+  .col {
+    max-width: 100%;
+  }
+
+  #projects .details img {
     height: auto;
-    padding: 40px 0;
+  }
+
+  /* Contact section */
+  .contact-methods-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    position: relative;
   }
 }
